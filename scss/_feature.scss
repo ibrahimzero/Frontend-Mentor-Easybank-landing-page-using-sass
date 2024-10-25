@@ -1,0 +1,31 @@
+.feature{
+
+    background-color: $LightGrayishBlue;
+    text-align: center;
+    &-gride{
+        @include breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &-item{
+        padding: .9rem;
+        @include breakpoint-up(medium){
+            flex: 0 0 50%;
+
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+            
+        }
+    }
+    &-icon{
+margin-bottom: 2.75rem;
+    }
+    &-title{
+
+    }
+    &-des{
+
+    }
+}
