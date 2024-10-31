@@ -1,6 +1,6 @@
 .hero {
     background-color: $VeryLightGray;
-  
+    color:#9698a6;
     .container {
   
       @include breakpoint-up(large){    
@@ -62,7 +62,7 @@
           width: 120%;
           height: 122%;
           background-size: 94%;
-          background-position: center 150%;
+          background-position: center 140%;
           left: 22%;
         }
       }
@@ -70,17 +70,12 @@
   
     &__text {
       text-align: center;
+      color:#9698a6;
   
       @include breakpoint-up(large){
         flex: 2;
         order: 1;
         text-align: left;
-      }
-      .hero-cta{
-        &:hover{
-          opacity: .5;
-        }
-        
       }
     }
   }

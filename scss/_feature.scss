@@ -1,5 +1,9 @@
 .feature{
-
+    
+    @include breakpoint-up(medium){
+        margin-top: 2rem;
+        padding-top:1rem ;
+      }
     background-color: $LightGrayishBlue;
     text-align: center;
     &-gride{
@@ -23,9 +27,8 @@
 margin-bottom: 2.75rem;
     }
     &-title{
-
-    }
-    &-des{
-
+        margin-bottom:2rem ;
+        font-weight: bold;
+        color: $DarkBlue;
     }
 }

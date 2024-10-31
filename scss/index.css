@@ -125,9 +125,10 @@ h2 {
   }
 }
 
-p {
+p, .feature-des {
   line-height: 1.5;
   margin-bottom: 2.25rem;
+  text-align: left;
 }
 
 a,
@@ -268,6 +269,7 @@ a:hover {
 
 .hero {
   background-color: hsl(0, 0%, 98%);
+  color: #9698a6;
 }
 @media (min-width: 64em) {
   .hero .container {
@@ -330,12 +332,13 @@ a:hover {
     width: 120%;
     height: 122%;
     background-size: 94%;
-    background-position: center 150%;
+    background-position: center 140%;
     left: 22%;
   }
 }
 .hero__text {
   text-align: center;
+  color: #9698a6;
 }
 @media (min-width: 64em) {
   .hero__text {
@@ -344,13 +347,16 @@ a:hover {
     text-align: left;
   }
 }
-.hero__text .hero-cta:hover {
-  opacity: 0.5;
-}
 
 .feature {
   background-color: hsl(220, 16%, 96%);
   text-align: center;
+}
+@media (min-width: 40em) {
+  .feature {
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
 }
 @media (min-width: 40em) {
   .feature-gride {
@@ -373,6 +379,179 @@ a:hover {
 }
 .feature-icon {
   margin-bottom: 2.75rem;
+}
+.feature-title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: hsl(233, 26%, 24%);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+}
+@media (min-width: 40em) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .article-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.article-item {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: all 150ms ease-in-out;
+}
+.article-item:hover {
+  transform: scale(1.05);
+}
+.article-image {
+  height: 12.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.article-text {
+  color: hsl(233, 8%, 62%);
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+}
+@media (min-width: 40em) {
+  .article-text {
+    padding: 1.875rem 1.5625rem;
+  }
+}
+.article-author {
+  font-size: 0.625rem;
+  margin-bottom: 1rem;
+}
+.article-title {
+  font-size: 1.06rem;
+  line-height: 1.2;
+  color: hsl(233, 26%, 24%);
+  margin-bottom: 0.5rem;
+}
+.articledescription {
+  font-size: 0.8125;
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    gap: 1rem;
+    justify-items: start;
+  }
+}
+.footer a {
+  color: #fff;
+}
+.footer__logo {
+  display: inline-block;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__social {
+    grid-area: social;
+    align-self: end;
+  }
+}
+.footer__social a {
+  display: inline-block;
+  height: 1.25rem;
+}
+.footer__social a svg path {
+  transition: fill 150ms ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: hsl(136, 65%, 51%);
+}
+.footer__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .footer__links {
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links.col1 {
+    grid-area: links1;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links.col2 {
+    grid-area: links2;
+  }
+}
+.footer__links a {
+  line-height: 2.25;
+  transition: color 150ms ease-in-out;
+}
+.footer__links a:hover {
+  color: hsl(136, 65%, 51%);
+}
+@media (min-width: 64em) {
+  .footer__cta {
+    grid-area: cta;
+    text-align: right;
+    justify-self: end;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__cta a.button {
+    margin-bottom: 1.875rem;
+  }
+}
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: hsl(233, 8%, 62%);
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    align-self: end;
+    justify-self: end;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
